@@ -1,4 +1,4 @@
-import { Router } from "express";
+import { response, Router } from "express";
 import { ensureAuthenticateClient } from "./middleware/ensureAuthenticateClient";
 import { AtuhenticateClientController } from "./modules/account/authenticateClient/AuthenticateClientController";
 import { AtuhenticateDeliverymanController } from "./modules/account/authenticateDeliveryman/AuthenticateDeliverymanController";
@@ -25,6 +25,10 @@ const updateDeliverymanController = new UpdateDeliverymanController();
 const updateEndDateController = new UpdateEndDateController();
 const findAllDeliveriesController = new FindAllDeliveriesController();
 const findAllDeliveriesDeliverymanController = new FindAllDeliveriesDeliverymanController();
+
+routes.get("/", function (req, res) {
+    res.json({ Working: 'yes' });
+});
 
 routes.post("/client/authenticate/", authenticateClientController.handle);
 routes.post("/deliveryman/authenticate/", authenticateDeliverymanController.handle);
