@@ -10,7 +10,7 @@ import { UpdateDeliverymanController } from "./modules/deliveries/useCases/updat
 import { UpdateEndDateController } from "./modules/deliveries/useCases/updateEndDate/UpdateEndDateController";
 import { ensureAuthenticateDeliveryman } from "./middleware/ensureAuthenticateDeliveryman";
 import { FindAllDeliveriesController } from "./modules/clients/useCases/deliveries/FindAllDeliveriesController";
-import { FindAllDeliveriesDeliverymanController } from "./modules/deliveryman/UseCases/findAllDeliveries/findAllDeliveriesDeliverymanController";
+import { FindAllDeliveriesDeliverymanController } from "./modules/deliveryman/UseCases/findAllDeliveries/FindAllDeliveriesDeliverymanController";
 
 const routes = Router();
 
